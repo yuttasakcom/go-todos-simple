@@ -12,6 +12,10 @@ type Todo struct {
 	gorm.Model
 }
 
+func (Todo) TableName() string {
+	return "todos"
+}
+
 type TodoHandler struct {
 	db *gorm.DB
 }
